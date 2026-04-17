@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sarkari Ecosystem | Smart Affidavit Builder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#d8e2ff",
+                    "primary-container": "#67758f",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "primary-fixed": "#d6e3ff",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed": "#001a41",
+                    "surface": "#f7f9fb",
+                    "primary": "#4f5c76",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "inverse-on-surface": "#eff1f3",
+                    "inverse-primary": "#b9c7e4",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-container": "#fefcff",
+                    "surface-container-high": "#e6e8ea",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-fixed": "#0d1c32",
+                    "tertiary": "#9e3d00",
+                    "on-primary-fixed-variant": "#39475f",
+                    "secondary": "#0059bb",
+                    "on-secondary-container": "#fefcff",
+                    "on-secondary-fixed-variant": "#004493",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-container": "#c64f00",
+                    "outline": "#717786",
+                    "on-tertiary-fixed": "#351000",
+                    "on-tertiary-container": "#fffbff",
+                    "on-surface-variant": "#414754",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "surface-tint": "#515f78",
+                    "secondary-container": "#0070ea",
+                    "outline-variant": "#c1c6d7",
+                    "secondary-fixed-dim": "#adc7ff",
+                    "surface-container": "#eceef0",
+                    "surface-container-highest": "#e0e3e5",
+                    "background": "#f7f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #191c1e; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e0e3e5; border-radius: 10px; }
+        .pdf-page {
+            aspect-ratio: 1 / 1.414;
+            width: 100%;
+            max-width: 680px;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-slate-50/60 dark:bg-slate-900/60 backdrop-blur-xl shadow-sm shadow-slate-900/5 flex justify-between items-center w-full px-6 py-3 max-w-full sticky top-0 z-50">
+<div class="flex items-center gap-6">
+<h1 class="text-xl font-bold text-slate-900 dark:text-slate-100 font-inter tracking-tight">Sarkari Ecosystem</h1>
+<nav class="hidden md:flex gap-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 text-sm font-medium Inter hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors px-3 py-1.5 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+                    Dashboard
+                </a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 pb-1 text-sm font-medium Inter" href="#">
+                    Templates
+                </a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-high px-4 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="text-sm font-semibold text-on-surface">Wallet: ₹2,450</span>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-200/50 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary overflow-hidden">
+<img alt="User Profile" class="h-full w-full object-cover" data-alt="Close-up portrait of a professional man in a business setting with soft natural office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIN0VF4ZeqXJkZtK48M75MG6CLFcFFYPfj4eGvmlgfh4o_GkfMq2EBPpqcqf8SY1LKvU8FNSY_K8Hv9C4JJRBJTWYQsrOu82K9UTGeG-Y3SG2d8OLnuA45bwwWg50hzic_IUqe8viu4zIXtXiPxLrr6Z6rBdLeO35NvcQbopamSQtq-gccdaP6Zynli5W3akIMy9m4XmAU7ROIGF7wcEs0sDIYWmTQJ2Rl--WfdceV8r8Q34sk8XI-OfeU0jtbFGjfYIk8K0rVFfWR"/>
+</div>
+</div>
+</header>
+<!-- Main Content Cluster -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Left Side: SideNavBar + Input Workspace -->
+<aside class="hidden lg:flex flex-col h-full w-64 bg-slate-50 dark:bg-slate-950 border-r border-slate-200/10 py-6 px-4 gap-4 flex-shrink-0">
+<div class="mb-4">
+<h2 class="text-lg font-black text-slate-900 dark:text-white font-inter">Affidavit Builder</h2>
+<p class="text-xs text-on-surface-variant opacity-70">Voter ID Correction</p>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<button class="bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg flex items-center gap-3 px-4 py-3 text-sm font-medium Inter transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+                    Personal Info
+                </button>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex items-center gap-3 px-4 py-3 text-sm font-medium Inter transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">description</span>
+                    Affidavit Details
+                </button>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex items-center gap-3 px-4 py-3 text-sm font-medium Inter transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">group</span>
+                    Witnesses
+                </button>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex items-center gap-3 px-4 py-3 text-sm font-medium Inter transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">fact_check</span>
+                    Review
+                </button>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/20">
+<div class="bg-surface-container-low p-4 rounded-xl mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Progress</span>
+<span class="text-xs font-bold text-secondary">25%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full">
+<div class="bg-secondary h-1 rounded-full w-1/4"></div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Workspace Section -->
+<div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+<!-- Dynamic Form Scrollable Area -->
+<section class="flex-1 bg-surface-container-low overflow-y-auto custom-scrollbar p-6 lg:p-10">
+<div class="max-w-xl mx-auto space-y-10">
+<div class="space-y-2">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface font-headline">Information Workspace</h2>
+<p class="text-on-surface-variant text-sm">Please fill out the details accurately. These will be automatically formatted into the legal document.</p>
+</div>
+<div class="space-y-6">
+<!-- Form Card 1 -->
+<div class="glass-card rounded-2xl p-6 shadow-sm border border-outline-variant/10">
+<label class="block text-[11px] uppercase tracking-widest font-bold text-secondary mb-4">Document Specification</label>
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-semibold text-on-surface-variant mb-1.5">Document Type</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high border-none rounded-lg py-3 px-4 text-on-surface appearance-none focus:ring-2 focus:ring-secondary/20 transition-all cursor-pointer">
+<option>Voter ID Name Correction Affidavit</option>
+<option>Birth Certificate Correction Affidavit</option>
+<option>Rental Agreement (Standard 11-Month)</option>
+<option>General Power of Attorney</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Card 2 -->
+<div class="glass-card rounded-2xl p-6 shadow-sm border border-outline-variant/10 space-y-6">
+<label class="block text-[11px] uppercase tracking-widest font-bold text-secondary">Deponent Details</label>
+<div>
+<label class="block text-xs font-semibold text-on-surface-variant mb-1.5">Full Name (As per Aadhar)</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg py-3 px-4 text-on-surface focus:bg-surface-container-lowest focus:ring-0 focus:border-b-2 focus:border-secondary transition-all" placeholder="e.g. Rajesh Kumar Sharma" type="text"/>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="col-span-1">
+<label class="block text-xs font-semibold text-on-surface-variant mb-1.5">Age</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg py-3 px-4 text-on-surface focus:bg-surface-container-lowest focus:ring-0 focus:border-b-2 focus:border-secondary transition-all" placeholder="42" type="number"/>
+</div>
+<div class="col-span-2">
+<label class="block text-xs font-semibold text-on-surface-variant mb-1.5">Gender</label>
+<div class="flex gap-2 p-1 bg-surface-container-high rounded-lg">
+<button class="flex-1 py-2 text-xs font-semibold rounded-md bg-surface-container-lowest shadow-sm text-secondary">Male</button>
+<button class="flex-1 py-2 text-xs font-semibold rounded-md text-on-surface-variant hover:bg-surface-container-highest transition-all">Female</button>
+<button class="flex-1 py-2 text-xs font-semibold rounded-md text-on-surface-variant hover:bg-surface-container-highest transition-all">Other</button>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-on-surface-variant mb-1.5">Permanent Address</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-lg py-3 px-4 text-on-surface focus:bg-surface-container-lowest focus:ring-0 focus:border-b-2 focus:border-secondary transition-all resize-none" placeholder="Enter full residential address including pincode" rows="3"></textarea>
+</div>
+</div>
+<!-- Form Card 3 -->
+<div class="glass-card rounded-2xl p-6 shadow-sm border border-outline-variant/10">
+<label class="block text-[11px] uppercase tracking-widest font-bold text-secondary mb-4">Declarations</label>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="mt-1">
+<input class="rounded border-outline-variant text-secondary focus:ring-secondary/20 h-4 w-4" id="c1" type="checkbox"/>
+</div>
+<label class="text-sm text-on-surface-variant leading-relaxed" for="c1">I solemnly affirm that the information provided above is true to the best of my knowledge and belief.</label>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-10 sticky bottom-0 bg-surface-container-low/80 backdrop-blur-md pb-6">
+<button class="w-full bg-gradient-to-br from-secondary to-secondary-container text-on-primary font-bold py-4 px-6 rounded-xl shadow-lg shadow-secondary/20 flex items-center justify-center gap-3 hover:scale-[1.01] active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                            Generate PDF Document (-₹20)
+                        </button>
+</div>
+</div>
+</section>
+<!-- Right Side: Live Preview Area -->
+<section class="hidden lg:flex w-[50%] xl:w-[45%] bg-slate-200 dark:bg-slate-900 overflow-y-auto custom-scrollbar items-start justify-center p-12">
+<div class="pdf-page bg-white shadow-2xl shadow-black/30 p-12 flex flex-col relative">
+<!-- Stamp Area -->
+<div class="absolute top-8 right-8 w-24 h-24 border-2 border-error/20 rounded-full flex items-center justify-center -rotate-12">
+<span class="text-error/30 text-[10px] font-bold text-center">STAMP<br/>REQUIRED</span>
+</div>
+<!-- Header -->
+<div class="text-center border-b-2 border-on-surface/10 pb-8 mb-8">
+<h3 class="text-2xl font-bold uppercase tracking-tight text-on-surface mb-1">Affidavit</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">(Before the Executive Magistrate / Notary Public)</p>
+</div>
+<!-- Body -->
+<div class="flex-1 space-y-6 text-on-surface leading-relaxed text-sm">
+<p>I, <span class="font-bold border-b border-on-surface/10 px-2 min-w-[120px] inline-block">Rajesh Kumar Sharma</span>, aged about <span class="font-bold border-b border-on-surface/10 px-2 min-w-[30px] inline-block">42</span> years, son of <span class="font-bold border-b border-on-surface/10 px-2 min-w-[120px] inline-block">Sohan Lal Sharma</span>, resident of <span class="font-bold border-b border-on-surface/10 px-2 min-w-[200px] inline-block">Flat 402, Green Avenue, Sector 15, Gurugram, Haryana - 122001</span>, do hereby solemnly affirm and state on oath as follows:</p>
+<ol class="list-decimal pl-6 space-y-4">
+<li>That I am the deponent of this affidavit and am well acquainted with the facts stated herein.</li>
+<li>That my name has been incorrectly recorded as <span class="italic text-on-surface-variant underline decoration-dotted">Rajesh Sharma</span> in the current electoral rolls / Voter ID card.</li>
+<li>That my correct and actual name as per my secondary school certificate and Aadhar card is <span class="font-bold">Rajesh Kumar Sharma</span>.</li>
+<li>That this affidavit is being submitted for the purpose of correcting my name in the official records of the Election Commission of India.</li>
+</ol>
+<p class="pt-8">I verify that the contents of paragraphs 1 to 4 are true and correct to my knowledge and nothing material has been concealed therefrom.</p>
+</div>
+<!-- Footer -->
+<div class="mt-20 flex justify-between items-end">
+<div class="space-y-1">
+<p class="text-xs">Date: <span class="border-b border-on-surface/10 min-w-[80px] inline-block">24/05/2024</span></p>
+<p class="text-xs">Place: <span class="border-b border-on-surface/10 min-w-[80px] inline-block">Gurugram</span></p>
+</div>
+<div class="text-center">
+<div class="w-32 h-1 bg-on-surface/10 mb-2 mx-auto"></div>
+<p class="text-[10px] font-bold uppercase tracking-widest">Deponent Signature</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FAB for Mobile Preview -->
+<button class="md:hidden fixed bottom-6 right-6 h-14 w-14 rounded-full bg-secondary text-on-primary shadow-xl flex items-center justify-center z-50">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</body></html>

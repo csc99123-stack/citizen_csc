@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Letter Generator | Operator Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#717786",
+                        "inverse-surface": "#2d3133",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "surface": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#001a41",
+                        "tertiary": "#9e3d00",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#adc7ff",
+                        "on-surface": "#191c1e",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-container": "#fefcff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "background": "#f7f9fb",
+                        "tertiary-container": "#c64f00",
+                        "on-primary-fixed-variant": "#39475f",
+                        "on-primary-container": "#fefcff",
+                        "primary-container": "#67758f",
+                        "primary": "#4f5c76",
+                        "outline-variant": "#c1c6d7",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "secondary-container": "#0070ea",
+                        "on-secondary-fixed-variant": "#004493",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-variant": "#e0e3e5",
+                        "surface-dim": "#d8dadc",
+                        "on-surface-variant": "#414754",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-tint": "#515f78",
+                        "primary-fixed": "#d6e3ff",
+                        "error": "#ba1a1a",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#b9c7e4",
+                        "surface-container": "#eceef0",
+                        "secondary": "#0059bb",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift { background-color: #0f172a; }
+        .ghost-border { border-color: rgba(193, 198, 215, 0.15); }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(193, 198, 215, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- SideNavBar (Authority: Shared Components JSON) -->
+<aside class="bg-slate-950 dark:bg-black h-screen w-64 fixed left-0 top-0 shadow-2xl shadow-black flex flex-col py-6 z-50">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="construction">construction</span>
+</div>
+<div>
+<h1 class="text-lg font-black text-white leading-tight">Operator Portal</h1>
+<p class="text-[10px] font-inter uppercase tracking-wider text-slate-500">Tech Services</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-slate-400 px-6 py-4 hover:bg-slate-900 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-inter label-md uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-400 px-6 py-4 hover:bg-slate-900 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-inter label-md uppercase tracking-wider">Wallet</span>
+</a>
+<a class="flex items-center gap-3 bg-blue-600/10 text-blue-400 border-r-4 border-blue-500 px-6 py-4 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+<span class="font-inter label-md uppercase tracking-wider">Tools</span>
+</a>
+<a class="flex items-center gap-3 text-slate-400 px-6 py-4 hover:bg-slate-900 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter label-md uppercase tracking-wider">Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/50">
+<img alt="Operator Profile" class="w-10 h-10 rounded-full object-cover shadow-lg" data-alt="professional portrait of a male operator in a modern corporate setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF_F_5b2XHTWwUHTRr7djEGsILhJnfGhi4AHzfJVwGow4qzlZIRP6Bp0sBIiFIwrU1kjj9_xMNJPH4FdgCJzpyrfKZscNb-Z-b-TTtTNp3FC9qkggjjTbSeVF4VQlkrEBzZh3Ksbz8YA5TZi3QnPQlj_APcokovW2iP27Oshvrkf1HbwRQ47-stuSAhnny_qW7XfMylkKCeD5V9pxIohyuA5U1ux4Yqio0Yym62Vh1lLkTUn0_dCORv_gFEddlb-OBR0Ej_rwQXaMu"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-white truncate">Admin User</p>
+<p class="text-[10px] text-slate-500 truncate">ID: OPS-8829</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="ml-64 h-screen flex flex-col">
+<!-- TopNavBar (Authority: Shared Components JSON) -->
+<header class="sticky top-0 w-full z-40 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-slate-200/15 flex justify-between items-center px-6 py-2">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-slate-800 dark:text-slate-100">Dashboard</span>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="search">search</span>
+<input class="bg-transparent border-none text-xs focus:ring-0 p-0 w-48" placeholder="Search services..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-blue-600" data-icon="account_balance_wallet" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span>Wallet Balance: ₹1250</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-50 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-50 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close up headshot of a smiling professional man for user profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANcQ7GlBY8rDlp-whuXb7wRXgEQd6LB1KIy1g2PAu98n5KCCVDOZK4_pQLmMBVnKp9_lAT1cG2VS920xbwVP69LpTAiA9re_m_M7e4ywZ70N7IVbww0Tvl6LFshdcpgXrDbtcGWIFFIc2lxdbzesYNEpBoyITQzC7rSbGRa9vBFf-tR01ulSoyi0kgp6ZKFb7DN7bBk4iUwCqLYszQIQehrJ0oZXiQWXSJww5BCIJeagMUPABLAzLJL3ASTaUcJOi1B4-XN5ADGCPb"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Tool Workspace -->
+<main class="flex-1 overflow-hidden grid grid-cols-12 gap-0">
+<!-- Left Panel: Form Controls -->
+<section class="col-span-12 md:col-span-5 lg:col-span-4 bg-surface-container-low p-8 overflow-y-auto border-r border-outline-variant/10">
+<div class="max-w-md mx-auto space-y-8">
+<div>
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface mb-2">AI Letter Generator</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">Craft professional, legally compliant letters in seconds using our institutional AI engine.</p>
+</div>
+<div class="space-y-6">
+<!-- Topic Input -->
+<div class="space-y-2">
+<label class="label-md font-bold uppercase tracking-widest text-[10px] text-outline">Letter Topic &amp; Purpose</label>
+<textarea class="w-full bg-surface-container-lowest rounded-xl p-4 border-none focus:ring-2 focus:ring-secondary/20 min-h-[100px] text-sm shadow-sm" placeholder="e.g., Application for new water connection at sector 4..."></textarea>
+</div>
+<!-- Language & Tone -->
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="label-md font-bold uppercase tracking-widest text-[10px] text-outline">Language</label>
+<select class="w-full bg-surface-container-lowest rounded-xl px-4 py-3 border-none focus:ring-2 focus:ring-secondary/20 text-sm shadow-sm appearance-none">
+<option>English</option>
+<option>Telugu (తెలుగు)</option>
+<option>Hindi (हिन्दी)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="label-md font-bold uppercase tracking-widest text-[10px] text-outline">Tone</label>
+<select class="w-full bg-surface-container-lowest rounded-xl px-4 py-3 border-none focus:ring-2 focus:ring-secondary/20 text-sm shadow-sm">
+<option>Formal/Official</option>
+<option>Urgent</option>
+<option>Persuasive</option>
+</select>
+</div>
+</div>
+<!-- User Details Section -->
+<div class="bg-surface-container-high/40 p-5 rounded-2xl space-y-4">
+<h3 class="text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="person">person</span>
+                                User Details
+                            </h3>
+<div class="space-y-3">
+<input class="w-full bg-surface-container-lowest rounded-lg px-4 py-2 text-sm border-none shadow-sm focus:ring-1 focus:ring-secondary" placeholder="Full Legal Name" type="text"/>
+<input class="w-full bg-surface-container-lowest rounded-lg px-4 py-2 text-sm border-none shadow-sm focus:ring-1 focus:ring-secondary" placeholder="Designation / Department" type="text"/>
+<input class="w-full bg-surface-container-lowest rounded-lg px-4 py-2 text-sm border-none shadow-sm focus:ring-1 focus:ring-secondary" placeholder="Registration/Aadhar ID (Optional)" type="text"/>
+</div>
+</div>
+<!-- Generate Button -->
+<button class="w-full bg-gradient-to-br from-secondary to-secondary-container text-white font-bold py-4 rounded-xl shadow-xl shadow-secondary/20 flex items-center justify-center gap-3 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="auto_awesome">auto_awesome</span>
+                            Generate Draft
+                        </button>
+</div>
+</div>
+</section>
+<!-- Right Panel: Live Preview -->
+<section class="col-span-12 md:col-span-7 lg:col-span-8 bg-surface-container p-8 lg:p-12 overflow-y-auto flex flex-col items-center">
+<div class="w-full max-w-4xl flex justify-between items-center mb-6">
+<div class="flex items-center gap-3">
+<span class="bg-primary/10 text-primary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Live Preview</span>
+<span class="text-xs text-outline italic">Format: A4 Standard</span>
+</div>
+<button class="flex items-center gap-2 bg-surface-container-lowest text-secondary px-5 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transition-all border border-outline-variant/20">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+                        Download PDF
+                    </button>
+</div>
+<!-- PDF Layout Simulation -->
+<div class="w-full max-w-[210mm] min-h-[297mm] glass-panel p-16 shadow-2xl relative mb-20 overflow-hidden">
+<!-- Subtle Letterhead Decoration -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary/40 via-secondary to-secondary/40"></div>
+<!-- Document Header -->
+<div class="flex justify-between items-start mb-16">
+<div class="space-y-1">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px]" data-icon="account_balance">account_balance</span>
+</div>
+<span class="font-bold text-xs tracking-tight text-slate-800">MUNICIPAL SERVICES PORTAL</span>
+</div>
+<p class="text-[10px] text-outline font-medium">Ref: AI-GEN-2023-9082</p>
+<p class="text-[10px] text-outline font-medium">Date: October 24, 2023</p>
+</div>
+<div class="text-right text-[10px] text-outline space-y-0.5">
+<p class="font-bold text-slate-800 uppercase">E-Document Branch</p>
+<p>Technology Center, Block B</p>
+<p>Digital Magistrate District</p>
+</div>
+</div>
+<!-- Subject -->
+<div class="mb-10">
+<p class="font-bold text-slate-900 border-b border-slate-900/10 pb-2 mb-4">Subject: Request for Issuance of New Service Connection / Official Record Update</p>
+</div>
+<!-- Content -->
+<div class="space-y-6 text-sm text-slate-700 leading-relaxed font-normal">
+<p>To,</p>
+<p class="font-semibold -mt-4">The Competent Authority,<br/>Department of Infrastructure &amp; Public Works.</p>
+<p>Respected Sir/Madam,</p>
+<p>With reference to the aforementioned subject, I, the undersigned, am writing to formally request the processing of an application regarding <strong>[Letter Topic]</strong>. This request is necessitated by the recent requirements for organizational alignment and the upgrading of existing service parameters within the specified jurisdiction.</p>
+<p>I have attached all requisite supporting documentation as per the institutional guidelines. It is requested that this matter be treated with the priority it requires to ensure minimal disruption to the ongoing operations at the designated site.</p>
+<p>Furthermore, I confirm that all provided user details are accurate and compliant with the Digital Magistrate Ecosystem standards. I look forward to a prompt resolution and am available for any further clarifications that may be required for the approval process.</p>
+<p>Thanking you for your time and consideration.</p>
+</div>
+<!-- Signature Area -->
+<div class="mt-20 space-y-1">
+<p class="text-sm font-medium">Yours Faithfully,</p>
+<div class="w-32 h-12 border-b border-slate-300 flex items-end pb-1 italic text-slate-400 text-xs">
+                            [Electronic Signature]
+                        </div>
+<p class="text-sm font-bold text-slate-900 mt-4">[User Full Name]</p>
+<p class="text-xs text-outline">[Designation / ID]</p>
+</div>
+<!-- Footer Stamp -->
+<div class="absolute bottom-12 right-16 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full border-2 border-secondary/20 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-secondary opacity-30 text-3xl" data-icon="verified">verified</span>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-10 h-10 border border-dashed border-secondary/30 rounded-full"></div>
+</div>
+</div>
+<p class="text-[8px] text-secondary font-bold uppercase mt-2 opacity-50 tracking-widest">AI Verified Draft</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

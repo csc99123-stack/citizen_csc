@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SarkariSaaS | Smart Forms &amp; Exam Prep</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline": "#717786",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed": "#001a41",
+                "tertiary": "#9e3d00",
+                "surface-bright": "#f7f9fb",
+                "background": "#f7f9fb",
+                "surface-tint": "#515f78",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed-variant": "#39475f",
+                "inverse-surface": "#2d3133",
+                "on-tertiary": "#ffffff",
+                "primary-fixed": "#d6e3ff",
+                "surface": "#f7f9fb",
+                "surface-container-highest": "#e0e3e5",
+                "primary": "#4f5c76",
+                "on-surface-variant": "#414754",
+                "on-primary": "#ffffff",
+                "secondary": "#0059bb",
+                "primary-container": "#67758f",
+                "on-error": "#ffffff",
+                "error": "#ba1a1a",
+                "tertiary-container": "#c64f00",
+                "inverse-primary": "#b9c7e4",
+                "tertiary-fixed-dim": "#ffb695",
+                "surface-dim": "#d8dadc",
+                "tertiary-fixed": "#ffdbcc",
+                "on-primary-fixed": "#0d1c32",
+                "error-container": "#ffdad6",
+                "on-primary-container": "#fefcff",
+                "inverse-on-surface": "#eff1f3",
+                "on-tertiary-fixed-variant": "#7c2e00",
+                "on-error-container": "#93000a",
+                "on-secondary-container": "#fefcff",
+                "secondary-fixed-dim": "#adc7ff",
+                "secondary-container": "#0070ea",
+                "outline-variant": "#c1c6d7",
+                "on-surface": "#191c1e",
+                "secondary-fixed": "#d8e2ff",
+                "surface-container-low": "#f2f4f6",
+                "on-secondary-fixed-variant": "#004493",
+                "surface-container": "#eceef0",
+                "on-tertiary-container": "#fffbff",
+                "surface-variant": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "on-tertiary-fixed": "#351000",
+                "primary-fixed-dim": "#b9c7e4",
+                "on-background": "#191c1e"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Inter", "sans-serif"],
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-link {
+            border-bottom: 2px solid #0059bb;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md shadow-sm shadow-blue-900/5 flex justify-between items-center px-8 py-3 max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white">SarkariSaaS</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-inter body-md tracking-tight text-blue-600 font-semibold border-b-2 border-blue-600 transition-all duration-200" href="#">Services</a>
+<a class="font-inter body-md tracking-tight text-slate-600 hover:text-blue-500 transition-all duration-200" href="#">Exams</a>
+<a class="font-inter body-md tracking-tight text-slate-600 hover:text-blue-500 transition-all duration-200" href="#">Resources</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-br from-secondary to-secondary-container text-on-secondary px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 active:scale-95 shadow-lg shadow-secondary/20">
+                Internet Center Login
+            </button>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center justify-center overflow-hidden bg-surface">
+<!-- Decorative Elements -->
+<div class="absolute top-20 left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl opacity-60"></div>
+<div class="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-40"></div>
+<div class="container mx-auto px-6 relative z-10 text-center">
+<div class="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/10 text-secondary font-medium text-xs tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm">verified</span> Verified Government Service Partner
+                </div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
+                    The Ultimate Platform for <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-secondary-container">Smart Forms &amp; Exam Prep</span>
+</h1>
+<!-- Prominent Search Bar -->
+<div class="max-w-2xl mx-auto mb-12">
+<div class="relative group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full pl-14 pr-32 py-5 bg-surface-container-high border-0 rounded-2xl focus:ring-2 focus:ring-secondary/50 focus:bg-surface-container-lowest transition-all shadow-xl shadow-blue-900/5 text-on-surface placeholder:text-outline/70" placeholder="Search for jobs, exam forms, or legal services..." type="text"/>
+<button class="absolute right-3 top-2.5 bottom-2.5 px-6 bg-secondary text-on-secondary rounded-xl font-bold text-sm hover:bg-secondary-container transition-colors">
+                            Find Service
+                        </button>
+</div>
+<p class="mt-4 text-outline body-sm">Popular: UPSC Registration, Affidavit Drafts, SSC Calendar</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-xl border border-outline-variant/5">
+<span class="material-symbols-outlined text-secondary">flash_on</span>
+<span class="text-sm font-medium">1-Click Auto Fill</span>
+</div>
+<div class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-xl border border-outline-variant/5">
+<span class="material-symbols-outlined text-secondary">security</span>
+<span class="text-sm font-medium">Data Privacy Guaranteed</span>
+</div>
+<div class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-xl border border-outline-variant/5">
+<span class="material-symbols-outlined text-secondary">support_agent</span>
+<span class="text-sm font-medium">24/7 Expert Support</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid - Bento Style -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-on-surface mb-2">Popular Digital Services</h2>
+<p class="text-outline max-w-xl">Everything you need to navigate administrative and educational processes in India, reimagined for the digital age.</p>
+</div>
+<a class="text-secondary font-bold inline-flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                        View All Services <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 min-h-[600px]">
+<!-- Large Feature: Sarkari Jobs -->
+<div class="md:col-span-2 md:row-span-2 glass-card rounded-3xl p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl hover:shadow-secondary/10 transition-all border border-outline-variant/10">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">work</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3">Sarkari Jobs</h3>
+<p class="text-outline leading-relaxed max-w-xs mb-8">Get personalized job alerts, fill exam forms instantly, and track application status in real-time.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span> UPSC, SSC, Banking &amp; more
+                                    </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Automated Document Resizing
+                                    </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Payment History Tracking
+                                    </li>
+</ul>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold hover:bg-secondary transition-colors">Start Job Search</button>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 opacity-10 group-hover:opacity-20 transition-opacity rotate-12">
+<img alt="Job portal icons" class="w-full h-full object-contain" data-alt="close-up 3d render of abstract geometric documents and briefcase in corporate blue and white aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNYjaqAyGc4NidqBqrvW-_ntd0k6LlUpTBoNKw7vrC1yMyBZ-08whba_e9-zp_ycRCHXEds_PRiBgadCDoghRkgSUI5rx_drOHxY5PD2jEH-rQqaBd1zq-pnoSPSm8aGgFFWaPSH77yownlDzeKvbS48sdKlH-829AIUkP71yXbnvKSMqVw9YM0SyEjskKpcMLdfm1HymtO6Swr14oFRJ91P_OGkpyn3bZ0VEgYM23nMCGbJU42SGIvX9XgN3oedMieDQXxG8hFeRx"/>
+</div>
+</div>
+<!-- AI Letters -->
+<div class="md:col-span-2 glass-card rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all border border-outline-variant/10 flex gap-8 items-center group">
+<div class="flex-1">
+<div class="w-12 h-12 bg-tertiary/10 rounded-xl flex items-center justify-center text-tertiary mb-4">
+<span class="material-symbols-outlined" data-weight="fill">smart_toy</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">AI Letters</h3>
+<p class="text-outline text-sm leading-relaxed">Draft legal letters, complaints, and official notices in seconds using our advanced AI models.</p>
+</div>
+<div class="w-32 h-32 rounded-2xl overflow-hidden shadow-inner flex-shrink-0">
+<img alt="AI documentation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="clean minimal office desk with a white laptop and glowing blue holographic circuit icons floating above the screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwNR2oqLRXUZV91EF7UJqs7c-f9YxRISIp6RhOw8R8tMU3uUYc-Lt4zOOM9DHGkjpYARluJYNXTmzTs5Gi20LjOM5dJCUcdkkUhY6m5onalxPsdIsT16Lb8kzJ9SdvxH2qf10s9ChoK9L6DRWzPSCt_GVRHK5WE4Nnq1FpX_QsrSlE7RQTCvGQqNerskX6v-99iPqFoHjoJK2C2abyimzpvb4uCg0XgKQ8KMNZGhuJ5Adx4c4hivoEyPwAgJW5TUy_36D4AMEwWi58"/>
+</div>
+</div>
+<!-- Affidavits -->
+<div class="glass-card rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all border border-outline-variant/10 group">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined" data-weight="fill">gavel</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Affidavits</h3>
+<p class="text-outline text-sm mb-4">Legally valid templates for name changes, addresses, and more.</p>
+<button class="text-secondary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Draft Now <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<!-- Exam Prep -->
+<div class="glass-card rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all border border-outline-variant/10 group bg-secondary text-on-secondary">
+<div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white mb-4">
+<span class="material-symbols-outlined" data-weight="fill">school</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Exam Prep</h3>
+<p class="text-white/80 text-sm mb-4">Mock tests and AI-curated study material for all exams.</p>
+<button class="text-white text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Join Portal <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-20 bg-surface">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center p-6 bg-surface-container-low rounded-2xl">
+<div class="text-4xl font-extrabold text-secondary mb-2">5M+</div>
+<div class="text-outline font-medium text-sm">Forms Processed</div>
+</div>
+<div class="text-center p-6 bg-surface-container-low rounded-2xl">
+<div class="text-4xl font-extrabold text-secondary mb-2">12k+</div>
+<div class="text-outline font-medium text-sm">CSC Centers</div>
+</div>
+<div class="text-center p-6 bg-surface-container-low rounded-2xl">
+<div class="text-4xl font-extrabold text-secondary mb-2">99%</div>
+<div class="text-outline font-medium text-sm">Success Rate</div>
+</div>
+<div class="text-center p-6 bg-surface-container-low rounded-2xl">
+<div class="text-4xl font-extrabold text-secondary mb-2">24h</div>
+<div class="text-outline font-medium text-sm">Support Sync</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24">
+<div class="container mx-auto px-6">
+<div class="relative bg-primary text-on-primary rounded-[3rem] p-12 md:p-20 overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+<img alt="Service center" class="w-full h-full object-cover" data-alt="modern tech office interior with soft blue ambient lighting and transparent glass partitions and high-end workstations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1443-UoMHJ9eQdDEzaUT8UAaiNgBAYIKKh-YqD-adJMhCSpMycU1zJ_J2K-ChqN3FqcoTCeWvTxlmSTItv2lko1IZl8TRZzEd0EqiHD4YN4W72bjUHV022n1HX3CwVkk3Ehh2ns8u3LCnW9oLfiYOWCB3V6YorgK_9zb_EPD8wGWmMkMnntowgjnZz5pqc_jnWnloqS2CbjlQmRHvrWABKfBCNm3RtrnjKJXQsOu1nXgkAP6gZD-_0PjHY4gMe97XzwNQ3z5kW0Bx"/>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Ready to modernize your <br/>Internet Center?</h2>
+<p class="text-on-primary/70 text-lg mb-10 leading-relaxed">Join thousands of CSC operators who have scaled their business by providing faster, automated, and AI-powered services to their local communities.</p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-secondary text-on-secondary rounded-2xl font-bold hover:bg-secondary-container transition-all shadow-xl shadow-secondary/20">
+                                Get Started as Operator
+                            </button>
+<button class="px-8 py-4 bg-white/10 text-white rounded-2xl font-bold backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all">
+                                Request Demo
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest/30 pt-20 pb-10">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
+<div class="md:col-span-2">
+<span class="text-2xl font-bold tracking-tighter text-on-surface block mb-6">SarkariSaaS</span>
+<p class="text-outline leading-relaxed max-w-sm mb-6">Empowering digital inclusion through innovative technology. Making Indian governance and education accessible to every citizen.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
+<span class="material-symbols-outlined">contact_page</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-on-surface-variant">Services</h4>
+<ul class="space-y-4 text-outline text-sm">
+<li><a class="hover:text-secondary transition-colors" href="#">Exam Forms</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Affidavit Drafts</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Legal AI Letters</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Mock Tests</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-on-surface-variant">Platform</h4>
+<ul class="space-y-4 text-outline text-sm">
+<li><a class="hover:text-secondary transition-colors" href="#">Operator Login</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Partner Portal</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">API Docs</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Mobile App</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-on-surface-variant">Legal</h4>
+<ul class="space-y-4 text-outline text-sm">
+<li><a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Security</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-10 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-outline text-xs">© 2024 SarkariSaaS Technologies Pvt Ltd. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<img alt="Payment methods" class="h-6 opacity-50 grayscale" data-alt="collection of minimal flat payment method icons including major credit cards and digital wallets on a light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaG3pUP0vBvUe4RLmgo8cy2jZuXTm2uLbFkuWwlZx0XOzLMNI4Z2_zvXBkVYltRW8rwSos3kOSrRD4mlaJBdWgeYHi1Te9fz2MKAec79flaQX5ZKBDAQgmeyh8lRqQKykF1MyPkk2c_Q6Fk-wwEGLda7vJej78OSck9TH3kb6X4sjrwYNc6rC6xhDmxGAlT_934tHsXTUISdqd0YUl0Yea5G0Ft574U1VPIImL2KHNbkzqXp460KXXJ8hkrVGG3uGuy0ss6QY48lmf"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

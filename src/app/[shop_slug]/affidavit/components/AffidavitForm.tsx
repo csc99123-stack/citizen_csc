@@ -79,7 +79,7 @@ export default function AffidavitForm({ shop_slug, initialBalance }: AffidavitFo
   const [referenceDoc, setReferenceDoc] = useState<File | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
+    const { name, value } = e.target; setFormData((prev) => ({ ...prev, [name]: value })); 
   };
 
   // ── AI & File Helpers ──────────────────────────────────────────────────────
